@@ -13,7 +13,7 @@ function App() {
   };
 
   const addTask = (newTask) => {
-    setTasks([...tasks, newTask]);
+    setTasks([...tasks, { ...newTask, id: Date.now() }]); // Ensure tasks have unique IDs
   };
 
   const changeCategory = (category) => {
